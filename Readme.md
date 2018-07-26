@@ -602,8 +602,8 @@ Python 中，一个变量的作用域总是由在代码中被赋值的地方所�
 
 线程全局锁(Global Interpreter Lock),即Python为了保证线程安全而采取的独立线程运行的限制,说白了就是一个核只能在同一时间运行一个线程.**对于io密集型任务，python的多线程起到作用，但对于cpu密集型任务，python的多线程几乎占不到任何优势，还有可能因为争夺资源而变慢。**
 
-见[Python 最难的问题](http://www.oschina.net/translate/pythons-hardest-problem)
-见[Python的GIL是什么鬼，多线程性能究竟如何](https://cenalulu.github.io/python/gil-in-python/)
+见[Python 最难的问题](http://www.oschina.net/translate/pythons-hardest-problem)  
+见[Python的GIL是什么鬼，多线程性能究竟如何](https://cenalulu.github.io/python/gil-in-python/)  
 解决办法就是多进程和下面的**协程**(协程也只是单CPU,但是能减小切换代价提升性能).
 
 ## 19 协程
@@ -614,7 +614,8 @@ Python 中，一个变量的作用域总是由在代码中被赋值的地方所�
 
 Python里最常见的yield就是协程的思想!可以查看第九个问题.
 
-Openstack主要通过eventlet库来使用协程的，较为突出的应用场景是各个组件的API。API是HTTP Rest方式，是用过WSGI方式提供的，而WSGI Server都是通过eventlet实现的。**在利用多核方面，openstack的实现方式是使用父进程进行任务分配调度，多个子进程提供服务，通常这里子进程的数量我们是可以配置的，一般配置成和CPU核数一样，以达到最高效率，每个子进程内部实现协程池，并自己调度协程切换，减少CPU的消耗。**见[OpenStack中的协程](http://niusmallnan.com/_build/html/_templates/openstack/coroutine_usage.html)
+Openstack主要通过eventlet库来使用协程的，较为突出的应用场景是各个组件的API。API是HTTP Rest方式，是用过WSGI方式提供的，而WSGI Server都是通过eventlet实现的。**在利用多核方面，openstack的实现方式是使用父进程进行任务分配调度，多个子进程提供服务，通常这里子进程的数量我们是可以配置的，一般配置成和CPU核数一样，以达到最高效率，每个子进程内部实现协程池，并自己调度协程切换，减少CPU的消耗。**    
+见[OpenStack中的协程](http://niusmallnan.com/_build/html/_templates/openstack/coroutine_usage.html)
 
 ## 20 闭包
 
@@ -700,7 +701,7 @@ d =  [1, 2, 3, 4, ['a', 'b']]
 简单解释就是：
 1. 对象赋值：旧瓶装旧酒，一起改变。
 2. 浅拷贝：新瓶装旧酒，改变不可变对象时，拷贝数据不变；改变可变对象时，拷贝数据随之改变。
-3. 深拷贝：新瓶装新酒，无论原数据怎么变，拷贝数据都不变。
+3. 深拷贝：新瓶装新酒，无论原数据怎么变，拷贝数据都不变。  
 见[图解Python深拷贝和浅拷贝](https://www.cnblogs.com/wilber2013/p/4645353.html)
 
 ## 24 Python垃圾回收机制
