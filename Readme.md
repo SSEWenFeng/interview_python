@@ -795,13 +795,27 @@ epoll改了三个缺点.
 
 ## 2 调度算法
 
+> 调度性能衡量
+> **周转时间**: 指作业从提交系统开始，直到作业完成为止的时间间隔。周转时间细分包括：
+> 1. 作业在外存后备队列中的等待时间
+> 2. 作业调入内存后创建的相应进程在就绪队列中的等待时间
+> 3. 进程在CPU上执行的时间
+> 4. 进程等待某些操作完成后的时间 
+>
+> 其中2、3、4在一个作业的整个处理过程中可能会发生多次。
+>
+> **带权周转时间** = 作业周转时间 / 作业实际运行时间
+> 
+
 1. 先来先服务(FCFS, First Come First Serve)
 2. 短作业优先(SJF, Shortest Job First)
 3. 最高优先权调度(Priority Scheduling)
 4. 时间片轮转(RR, Round Robin)
 5. 多级反馈队列调度(multilevel feedback queue scheduling)
 
-常见的调度算法总结:http://www.jianshu.com/p/6edf8174c1eb
+常见的调度算法总结:  
+1. http://www.jianshu.com/p/6edf8174c1eb
+2. https://blog.csdn.net/u011080472/article/details/51217754
 
 实时调度算法:
 
@@ -892,7 +906,10 @@ Bulid过程可以分解为4个步骤:预处理(Prepressing), 编译(Compilation)
 1. 最佳置换算法OPT:不可能实现
 2. 先进先出FIFO
 3. 最近最久未使用算法LRU:最近一段时间里最久没有使用过的页面予以置换.
-4. clock算法
+4. 最近最少使用算法LFU：最近一段时间内最少使用的页面予以置换
+5. clock算法: 简单clock算法只有使用位（u），改进clock算法有使用位和改动位（u, m），[clock算法](https://blog.csdn.net/wanghao109/article/details/13003479)  
+
+其他算法参考：https://www.cnblogs.com/xiezie/p/5604852.html  
 
 ## 9 边沿触发和水平触发
 
