@@ -1112,6 +1112,20 @@ PUT所对应的URI是要创建或更新的资源本身。比如：`PUT http://ww
 
 
 ## 13 SOAP
+> [透析SOA、RPC、SOAP、REST、ICE、ESB模型发展史](https://www.zhoulujun.cn/html/theory/SOA/2017_0825_8042.html)
+> SOA就是一种思想，就是把项目拆成组件，每个组件暴露出服务，“你调我，我调你”，大家一起把活干完。强调的是服务的相互调用。  
+> SOA: 面向服务的软件架构（Service Oriented Architecture）,是一种计算机软件的设计模式，主要应用于不通应用组件中通过某种协议来互操作。例如典型的通过网络协议。因此SOA是独立于任何厂商、产品与技术的。
+> 基于SOA的解决方案，努力使经营目标而建立企业的质量体系。SOA架构是五层水平:  
+> 1. 用户界面层–这些GUI的最终用户或应用程序访问的应用程序/服务接口。
+> 2. 业务流程层–这些精心设计的代表在应用方面的业务用例服务。
+> 3. 服务层–服务合并在一起，为整个企业提供实时服务
+> 4. 服务组件层–用来建造服务的组件，如功能库和技术库，技术接口等。
+> 5. 操作系统–这层包含数据模型，企业数据仓库，技术平台等.  
+>
+> 正因为SOA架构实现不依赖于技术，因此能够被各种不同的技术实现。  
+例如：  
+SOAP, RPC，REST，DCOM，CORBA，OPC-UA，Web services，DDS，Java RMI，WCF (Microsoft's implementation of web services now forms a part of WCF)，Apache Thrift，SORCER  
+**web service是SOA很常用的一种实行方式。**  
 
 SOAP（原为Simple Object Access Protocol的首字母缩写，即简单对象访问协议）是交换数据的一种协议规范，使用在计算机网络Web服务（web service）中，交换带结构信息。SOAP为了简化网页服务器（Web Server）从XML数据库中提取数据时，节省去格式化页面时间，以及不同应用程序之间按照HTTP通信协议，遵从XML格式执行资料互换，使其抽象于语言实现、平台和硬件。
 
