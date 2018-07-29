@@ -777,9 +777,10 @@ http://stackoverflow.com/questions/94935/what-is-the-difference-between-range-an
 
 其实所有的I/O都是轮询的方法,只不过实现的层面不同罢了.
 
-这个问题可能有点深入了,但相信能回答出这个问题是对I/O多路复用有很好的了解了.其中tornado使用的就是epoll的.
+这个问题可能有点深入了,但相信能回答出这个问题是对I/O多路复用有很好的了解了.其中tornado使用的就是epoll的.  
 
-[selec,poll和epoll区别总结](http://www.cnblogs.com/Anker/p/3265058.html)
+[聊聊IO多路复用之select、poll、epoll详解](https://my.oschina.net/xianggao/blog/663655)
+[selec,poll和epoll区别总结](http://www.cnblogs.com/Anker/p/3265058.html)  
 
 基本上select有3个缺点:
 
