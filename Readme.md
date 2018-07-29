@@ -1121,7 +1121,11 @@ RPC（Remote Procedure Call Protocol）——远程过程调用协议，它是�
 
 总结:服务提供的两大流派.传统意义以方法调用为导向通称RPC。为了企业SOA,若干厂商联合推出webservice,制定了wsdl接口定义,传输soap.当互联网时代,臃肿SOA被简化为http+xml/json.但是简化出现各种混乱。以资源为导向,任何操作无非是对资源的增删改查，于是统一的REST出现了.
 
-进化的顺序: RPC -> SOAP -> RESTful
+进化的顺序: RPC -> SOAP -> RESTful  
+[Oslo.messaging](https://wiki.openstack.org/wiki/Oslo/Messaging) 是 OpenStack 非常重要的 RPC 库，它基于支持 [AMQP(Advanced Message Queuing Protocol) 协议（应用层协议）](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 的消息中间件，为同一个项目内的各个进程之间的通信提供了 API，如 nova-api 和 nova-scheduler 的通信，cinder-api 和 cinder-volume 的通信等。  
+详见：  
+1. [理解 RPC 之 oslo.messaging](http://wsfdl.com/openstack/2015/12/06/olso_messaging.html)
+2. [RabbitMQ 和 oslo.messaging](http://liaoph.com/rabbitmq-and-oslo-messaging/)
 
 ## 15 CGI和WSGI
 CGI是通用网关接口，是连接web服务器和应用程序的接口，用户通过CGI来获取动态数据或文件等。
@@ -1129,7 +1133,10 @@ CGI程序是一个独立的程序，它可以用几乎所有语言来写，包�
 
 WSGI, Web Server Gateway Interface，是Python应用程序或框架和Web服务器之间的一种接口，WSGI的其中一个目的就是让用户可以用统一的语言(Python)编写前后端。
 
-官方说明：[PEP-3333](https://www.python.org/dev/peps/pep-3333/)
+官方说明：[PEP-3333](https://www.python.org/dev/peps/pep-3333/)  
+WSGI在Openstack中的应用：  
+1. [理解 WSGI 框架](http://wsfdl.com/python/2013/10/14/%E7%90%86%E8%A7%A3WSGI%E6%A1%86%E6%9E%B6.html)
+2. [深入理解 nova-api 的 WSGI](http://wsfdl.com/openstack/2013/10/18/%E7%90%86%E8%A7%A3nova-api%E7%9A%84WSGI%E6%A1%86%E6%9E%B6.html)
 
 ## 16 中间人攻击
 
